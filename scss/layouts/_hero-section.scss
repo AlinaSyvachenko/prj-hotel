@@ -1,0 +1,95 @@
+.hero-section {
+  &__container {
+    background-image: url(../img/background-hero-section-375px.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    padding-top: 110px;
+    padding-bottom: 432px;
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 200;
+    font-size: 56px;
+    line-height: 1.14;
+    color: var(--color-white);
+  }
+
+  &__describe {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-white);
+  }
+}
+
+.networks {
+  display: flex;
+  gap: 8px;
+
+  &__container {
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icone {
+    fill: var(--color-white);
+  }
+}
+
+.check-availability {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-brand-blue);
+  color: var(--color-white-transparent);
+  position: absolute;
+  top: 494px;
+  left: 30px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 14px;
+
+  &__data {
+    padding-left: 32px;
+    padding-top: 24px;
+    padding-bottom: 96px;
+    margin: 0;
+    border-bottom: 1px solid #21364e;
+    // ///////////////////////// delite
+    min-width: 344px;
+  }
+
+  &__number {
+    padding-top: 24px;
+    padding-bottom: 96px;
+    width: 172px;
+    border: 1px solid #21364e;
+    text-align: center;
+  }
+
+  &__container-button {
+    margin: 0 auto;
+  }
+  &__button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-grey);
+    background-color: var(--color-brand-green);
+    border: none;
+    width: 226px;
+    height: 48px;
+    border-radius: 24px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}
