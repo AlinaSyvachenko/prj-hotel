@@ -1,0 +1,92 @@
+.restaurants-hotel {
+  &__container {
+    background-color: var(--color-brand-blue-light);
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    @media screen and (min-width: 1024px) {
+      gap: 98px;
+    }
+    @media screen and (min-width: 1440px) {
+      gap: 198px;
+    }
+  }
+
+  &__background-cafe {
+    padding: 26px 23px 29px 25px;
+    border: 1px solid #d8d8d8;
+    border-radius: 15px;
+    position: absolute;
+    top: 80px;
+  }
+
+  &__title {
+    margin-top: 232px;
+    max-width: 260px;
+    
+    @media screen and (min-width: 768px) {
+      margin-top: 252px;
+    }
+  }
+
+  &__describe {
+    margin-top: 32px;
+
+    max-width: 346px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 242px;
+    }
+    @media screen and (min-width: 1024px) {
+      max-width: 338px;
+    }
+  }
+
+  &__button {
+    margin-top: 38px;
+    @include button(
+      170px,
+      var(--color-grey),
+      transparent,
+      1px solid var(--color-grey-transparent)
+    );
+    
+    @media screen and (min-width: 768px) {
+      margin-top: 52px;
+    }
+  }
+
+  &__background-element {
+    position: absolute;
+    top: -40px;
+    left: 38px;
+    z-index: -1;
+    @media screen and (min-width: 768px) {
+      top: 170px;
+      left: -40px;
+    }
+  }
+
+  &__card-svg {
+    padding-top: 20px;
+    fill: var(--color-white);
+    background-image: linear-gradient(180deg, #7f95ae 0%, #e5e9ef 100%);
+  }
+
+  &__upper-block-card {
+    border-radius: 15px;
+    position: absolute;
+    top: 220px;
+    right: -15px;
+  }
+}

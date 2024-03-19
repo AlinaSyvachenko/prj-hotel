@@ -11,12 +11,23 @@
     <header class="header">
       <div class="container">
         <div class="header__container">
-          <nav>
-            <a class="logo" href="#">HOTEL</a>
+          <nav class="header__nav">
+            <a class="logo header__logo" href="#">HOTEL</a>
+            <ul class="header__menu">
+              <li class="header__menu-link">About</li>
+              <li class="header__menu-link">Service</li>
+              <li class="header__menu-link">Rooms</li>
+              <li class="header__menu-link">Blog</li>
+              <li class="header__menu-link">Contact</li>
+            </ul>
           </nav>
-          <button class="header__button" type="button">Sign up</button>
+          <button class="button header__button" type="button">Sign up</button>
           <!-- button burger menu -->
-          <button type="button"></button>
+          <button class="header__button-burger" id="burger" type="button">
+            <span class="header__button-burger-item"></span>
+            <span class="header__button-burger-item"></span>
+            <span class="header__button-burger-item"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -46,7 +57,12 @@
               </a>
             </div>
             <div class="check-availability">
-              <div>
+              <div class="check-availability__arrival">
+                <img
+                  class="hero-section__background-element"
+                  src="./img/background-element-square.png"
+                  alt="background-element"
+                />
                 <p class="check-availability__data">ARRIVAL</p>
               </div>
               <div>
@@ -60,53 +76,271 @@
               </div>
 
               <div class="check-availability__container-button">
-                <button class="check-availability__button" type="button">
+                <button class="button check-availability__button" type="button">
                   Check Availability
                 </button>
               </div>
+
+              <div class="check-availability__shadow"></div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- about company -->
-      <!-- <section class="about-hotel">
-        <div class="container">
-            <img src="./img/background-bed.png" alt="Bed background image">
-            <h2>Luxury Plaza 
-Hotel for You</h2>
-<p>Distant orb has power to raise and purify our thoughts like a strain of sacred music.</p>
-<p>About us</p>
-<img src="./img/background-element-square.png" alt="">
-<div>
-    <img src="./img/card-about-hotel-375-768px.png" alt="hotel backyard and pool"> -->
-      <!-- svg -->
-      <!-- <p>Play video</p>
-    <p>2:34</p>
-    <div>
-        <p>%</p>
-        <p>92</p>
-        <p>Succeful Booking</p>
-        <img src="./img/statistics-linear-gradient.png" alt="statistics in the graph">
-    </div>
-</div>
+      <section class="about-hotel">
+        <div class="about-hotel__container">
+          <div class="container">
+            <div class="about-hotel__flex-container">
+              <div>
+                <img
+                  class="about-hotel__background-bed"
+                  src="./img/background-bed.png"
+                  alt="Bed background image"
+                />
+                <h2 class="title about-hotel__title">
+                  Luxury Plaza Hotel for You
+                </h2>
+                <p class="describe about-hotel__describe">
+                  Distant orb has power to raise and purify our thoughts like a
+                  strain of sacred music.
+                </p>
+                <p class="button about-hotel__button">About us</p>
+              </div>
+
+              <div class="card">
+                <img
+                  class="card__background-img"
+                  src="./img/card-about-hotel-375-768px.png"
+                  alt="hotel backyard and pool"
+                />
+                <div class="card__overlay">
+                  <div class="card__svg">
+                    <svg width="26" height="26">
+                      <use href="./img/icone.svg#icon-card-arrow-play"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="card__title">Play video</p>
+                    <p class="card__subtitle">2:34</p>
+                  </div>
+                </div>
+                <div class="card__shadow"></div>
+                <div class="card__shadow"></div>
+                <div class="about-hotel__upper-block-card">
+                  <p class="about-hotel__upper-block-percentage">%</p>
+                  <p class="about-hotel__upper-block-numeric">92</p>
+                  <p class="about-hotel__upper-block-text">Succeful Booking</p>
+                  <img
+                    class="about-hotel__upper-block-statistics"
+                    src="./img/statistics-linear-gradient.png"
+                    alt="statistics in the graph"
+                  />
+                </div>
+                <img
+                  class="about-hotel__background-element"
+                  src="./img/background-element-square.png"
+                  alt="background-element"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- wellness & spa -->
-      <!-- <section class="servises-hotel">
-        <div class="container"></div>
-      </section> -->
+      <section class="servises-hotel">
+        <div class="container">
+          <div class="servises-hotel__flex-container">
+            <!-- left -->
+            <div>
+              <div class="card">
+                <img
+                  class="card__background-img"
+                  src="./img/card-wellness-spa-375-from1024px.jpg"
+                  alt="hotel backyard and pool"
+                />
+                <div class="card__overlay">
+                  <div class="card__svg servises-hotel__card-svg">
+                    <svg width="36" height="36">
+                      <use href="./img/icone.svg#icon-card-star"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="card__title">+ $189</p>
+                    <p class="card__subtitle">Additional Price</p>
+                  </div>
+                </div>
+                <div class="card__shadow"></div>
+                <div class="card__shadow"></div>
+                <img
+                  class="servises-hotel__background-element"
+                  src="./img/background-element-square.png"
+                  alt="background-element"
+                />
+              </div>
+            </div>
+            <!-- right -->
+            <div>
+              <img
+                class="servises-hotel__face-spa"
+                src="./img/background-face-spa.png"
+                alt="Bed background image"
+              />
+              <h2 class="title servises-hotel__title">Wellness & Spa</h2>
+              <p class="describe servises-hotel__describe">
+                Raise and purify our thoughts like a strain of sacred music, or
+                a noble picture, or a passage from the grander poets.
+              </p>
+              <p class="button servises-hotel__button">Explore</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- restaurants & bars -->
-      <!-- <section class="restaurants-hotel">
-        <div class="container"></div>
-      </section> -->
+      <section class="restaurants-hotel">
+        <div class="restaurants-hotel__container">
+          <div class="container">
+            <div class="restaurants-hotel__flex-container">
+              <!-- left -->
+
+              <div>
+                <img
+                  class="restaurants-hotel__background-cafe"
+                  src="./img/background-cafe.png"
+                  alt="Bed background image"
+                />
+                <h2 class="title restaurants-hotel__title">
+                  Restaurants & Bars
+                </h2>
+                <p class="describe restaurants-hotel__describe">
+                  Distant orb has power to raise and purify our thoughts like a
+                  strain of sacred music.
+                </p>
+                <p class="button restaurants-hotel__button">Reserve a table</p>
+              </div>
+
+              <!-- right -->
+
+              <div class="card">
+                <img
+                  class="card__background-img"
+                  src="./img/card-chef-375-768px.jpg"
+                  alt="chef cook hotel"
+                />
+                <div class="card__overlay">
+                  <div class="card__svg restaurants-hotel__card-svg">
+                    <svg width="36" height="36">
+                      <use href="./img/icone.svg#icon-card-burger"></use>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="card__title">+ $20</p>
+                    <p class="card__subtitle">Lunch Price</p>
+                  </div>
+                </div>
+                <div class="card__shadow"></div>
+                <div class="card__shadow"></div>
+                <img
+                  class="restaurants-hotel__background-element"
+                  src="./img/background-element-square.png"
+                  alt="background-element"
+                />
+                <img
+                  class="restaurants-hotel__upper-block-card"
+                  src="./img/maps.png"
+                  alt="maps-static"
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- advantages -->
-      <!-- <section class="advantages-hotel">
-        <div class="container"></div>
-      </section> -->
+      <section class="advantages-hotel">
+        <div class="container">
+          <h2 class="title advantages-hotel__title">Advantages</h2>
+
+          <div class="advantages-hotel__container-cards">
+            <!-- card wi-fi -->
+            <div class="advantages-hotel__card-wifi">
+              <img
+                class="advantages-hotel__background-element"
+                src="./img/background-element-square.png"
+                alt="background-element"
+              />
+              <img class="advantages-hotel__card-wifi-img"
+                src="./img/card-advantages.jpg"
+                alt="conference room"
+              />
+              <div class="advantages-hotel__card-wifi-svg">
+                <svg width="46" height="46">
+                  <use href="./img/icone.svg#icon-card-wifi"></use>
+                </svg>
+              </div>
+
+              <h2 class="title advantages-hotel__card-wifi-title">Free Wi-Fi</h2>
+              <p class="describe advantages-hotel__card-wifi-describe">
+                Distant orb has power to raise and purify our thoughts like a
+                strain of sacred music, or a noble picture, or a passage.
+              </p>
+            </div>
+
+            <!-- card events -->
+            <div class="advantages-hotel__card-events">
+              <div class="advantages-hotel__card-events-svg">
+                <svg width="36" height="36">
+                  <use href="./img/icone.svg#icon-card-salute"></use>
+                </svg>
+              </div>
+              <div>
+                <h3 class="subtitle">Special Events</h3>
+                <p class="describe">
+                  Distant orb has power to raise and purify our thoughts like a
+                  strain of sacred music, or a noble picture, or a passage from
+                  the grander poets.
+                </p>
+              </div>
+            </div>
+            <!-- card price -->
+            <div class="advantages-hotel__card-price">
+              <div class="advantages-hotel__card-price-svg">
+                <svg width="36" height="36">
+                  <use href="./img/icone.svg#icon-card-write"></use>
+                </svg>
+              </div>
+
+              <h3 class="subtitle advantages-hotel__card-price-subtitle">Best Price</h3>
+              <p class="describe">
+                Power to raise and purify our thoughts like a strain.
+              </p>
+            </div>
+            <!-- card calendar  -->
+            <div
+              class="advantages-hotel__card-cancellation"
+            >
+              <div class="advantages-hotel__card-cancellation-svg">
+                <svg width="36" height="36">
+                  <use href="./img/icone.svg#icon-card-calendar"></use>
+                </svg>
+              </div>
+
+              <h3 class="subtitle advantages-hotel__card-cancellation-subtitle">Free Cancellation</h3>
+              <p class="describe">
+                Like a strain of sacred music, or a noble picture.
+              </p>
+              <img
+                class="advantages-hotel__background-element-bottom"
+                src="./img/background-element-square.png"
+                alt="background-element"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- rooms -->
       <!-- <section class="rooms-hotel">
@@ -126,5 +360,7 @@ Hotel for You</h2>
 
     <!-- footer -->
     <!-- <footer></footer> -->
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

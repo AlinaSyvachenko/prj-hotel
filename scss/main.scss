@@ -6,16 +6,17 @@
 @import './utils/texts';
 @import './utils/mixins';
 
+@import './components/logo';
+@import './components/buttons';
+@import './components/cards';
 
 @import './utils/container';
-@import './components/logo';
 @import './layouts/header';
 @import './layouts/hero-section';
-// @import '';
-// @import '';
-// @import '';
-// @import '';
-// @import '';
+@import './layouts/about-hotel';
+@import './layouts/servises-hotel';
+@import './layouts/restaurants-hotel';
+@import './layouts/advantages-hotel';
 // @import '';
 // @import '';
 // @import '';

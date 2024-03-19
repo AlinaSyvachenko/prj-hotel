@@ -1,0 +1,76 @@
+.servises-hotel {
+  position: relative;
+  padding-bottom: 80px;
+
+  &__flex-container {
+      display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 88px;
+      @media screen and (min-width: 1024px) {
+      gap: 98px;
+    }
+     @media screen and (min-width: 1440px) {
+      gap: 198px;
+    }
+  }
+
+  &__background-element {
+    position: absolute;
+    top: -36px;
+    right: 48px;
+    z-index: -1;
+       @media screen and (min-width: 768px) {
+      top: 170px;
+      right: -40px;
+    }
+  }
+
+  &__card-svg {
+    background-image: linear-gradient(180deg, #7f95ae 0%, #e5e9ef 100%);
+    fill: var(--color-white);
+    width: 96px;
+    height: 96px;
+  }
+
+  &__face-spa {
+        padding: 26px 23px 29px 25px;
+    border: 1px solid #d8d8d8;
+    border-radius: 15px;
+  
+    @media screen and (min-width: 768px) {
+     margin-top: 80px;
+    }
+  }
+
+  &__title {
+    margin-top: 42px;
+
+    @media screen and (min-width: 768px) {
+     max-width: 170px;
+    }
+  }
+
+  &__describe {
+    margin-top: 32px;
+    max-width: 346px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 242px;
+    }
+     @media screen and (min-width: 1024px) {
+      max-width: 338px;
+    }
+  
+  }
+
+  &__button {
+    margin-top: 38px;
+     @include button(
+      170px,
+      var(--color-grey),
+      transparent,
+      1px solid var(--color-grey-transparent)
+    );
+  }
+}

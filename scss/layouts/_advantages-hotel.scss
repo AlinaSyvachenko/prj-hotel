@@ -1,0 +1,190 @@
+.advantages-hotel {
+  position: relative;
+  padding-bottom: 80px;
+
+  &__container-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 608px 352px 288px 288px;
+    gap: 32px;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 544px 184px 288px;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: 470px 220px 220px;
+      grid-template-rows: 252px 307px;
+      gap: 30px;
+    }
+     @media screen and (min-width: 1440px) {
+      grid-template-columns: 570px 270px 270px;
+      grid-template-rows: 224px 288px;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    margin-top: 75px;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+
+  &__background-element {
+    position: absolute;
+    top: -40px;
+    left: 30px;
+    z-index: -2;
+
+    @media screen and (min-width: 1024px) {
+      top: 60px;
+      left: -40px;
+    }
+  }
+
+  &__card-wifi {
+    box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 30px;
+    background-color: var(--color-white);
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+
+  &__card-wifi-img {
+    width: 298px;
+    height: 320px;
+    @media screen and (min-width: 768px) {
+      width: 692px;
+    }
+  }
+
+  &__card-wifi-svg {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    background-color: var(--color-white);
+    width: 112px;
+    height: 112px;
+    text-align: center;
+    padding-top: 32px;
+    border-radius: 15px;
+  }
+
+  &__card-wifi-title {
+    margin-top: 34px;
+    padding-left: 16px;
+    margin-bottom: 0;
+  }
+
+  &__card-wifi-describe {
+    margin-top: 14px;
+    padding-left: 16px;
+    padding-right: 18px;
+  }
+
+  &__card-events {
+    display: flex;
+    gap: 32px;
+    padding: 26px;
+    padding-top: 40px;
+    background-color: var(--color-white);
+    box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    @media screen and (min-width: 768px) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  &__card-events-svg {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    padding: 20px;
+    border-radius: 15px;
+    fill: var(--color-brand-blue);
+  }
+
+  &__card-price {
+    padding: 26px;
+    padding-top: 40px;
+    box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-color: var(--color-brand-blue-light);
+    @media screen and (min-width: 1024px) {
+      padding-top: 26px;
+    }
+  }
+
+  &__card-price-svg {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 6px;
+    margin-bottom: 24px;
+    border-radius: 15px;
+    fill: var(--color-white);
+    background-color: var(--color-brand-blue);
+  }
+
+  &__card-price-subtitle {
+    font-size: 20px;
+  }
+
+  &__card-cancellation {
+    position: relative;
+    padding: 26px;
+    padding-top: 40px;
+
+    box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    background-color: var(--color-white);
+    @media screen and (min-width: 1024px) {
+      padding-top: 26px;
+    }
+  }
+
+  &__card-cancellation-svg {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    padding: 20px;
+    border-radius: 15px;
+    fill: var(--color-brand-blue);
+    margin-bottom: 24px;
+  }
+
+  &__card-cancellation-subtitle {
+    font-size: 20px;
+  }
+
+  &__background-element-bottom {
+    position: absolute;
+    right: 20px;
+    bottom: -40px;
+    z-index: -1;
+    @media screen and (min-width: 1024px) {
+      right: -20px;
+      bottom: 40px;
+    }
+  }
+}
