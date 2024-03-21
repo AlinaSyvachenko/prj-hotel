@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOTEL</title>
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
   </head>
   <body>
     <!-- Header-->
@@ -253,7 +265,6 @@
                   alt="maps-static"
                 />
               </div>
-
             </div>
           </div>
         </div>
@@ -272,7 +283,8 @@
                 src="./img/background-element-square.png"
                 alt="background-element"
               />
-              <img class="advantages-hotel__card-wifi-img"
+              <img
+                class="advantages-hotel__card-wifi-img"
                 src="./img/card-advantages.jpg"
                 alt="conference room"
               />
@@ -282,7 +294,9 @@
                 </svg>
               </div>
 
-              <h2 class="title advantages-hotel__card-wifi-title">Free Wi-Fi</h2>
+              <h2 class="title advantages-hotel__card-wifi-title">
+                Free Wi-Fi
+              </h2>
               <p class="describe advantages-hotel__card-wifi-describe">
                 Distant orb has power to raise and purify our thoughts like a
                 strain of sacred music, or a noble picture, or a passage.
@@ -313,22 +327,24 @@
                 </svg>
               </div>
 
-              <h3 class="subtitle advantages-hotel__card-price-subtitle">Best Price</h3>
+              <h3 class="subtitle advantages-hotel__card-price-subtitle">
+                Best Price
+              </h3>
               <p class="describe">
                 Power to raise and purify our thoughts like a strain.
               </p>
             </div>
             <!-- card calendar  -->
-            <div
-              class="advantages-hotel__card-cancellation"
-            >
+            <div class="advantages-hotel__card-cancellation">
               <div class="advantages-hotel__card-cancellation-svg">
                 <svg width="36" height="36">
                   <use href="./img/icone.svg#icon-card-calendar"></use>
                 </svg>
               </div>
 
-              <h3 class="subtitle advantages-hotel__card-cancellation-subtitle">Free Cancellation</h3>
+              <h3 class="subtitle advantages-hotel__card-cancellation-subtitle">
+                Free Cancellation
+              </h3>
               <p class="describe">
                 Like a strain of sacred music, or a noble picture.
               </p>
@@ -343,9 +359,93 @@
       </section>
 
       <!-- rooms -->
-      <!-- <section class="rooms-hotel">
-        <div class="container"></div>
-      </section> -->
+      <section class="rooms-hotel">
+        <div class="rooms-hotel__container">
+          <div class="container">
+            <div class="rooms-hotel__container-flex">
+              <h2 class="title rooms-hotel__title">Rooms</h2>
+              <p class="describe rooms-hotel__describe">
+                Distant orb has power to raise and purify our thoughts like a
+                strain of sacred music.
+              </p>
+            </div>
+
+            <div class="owl-carousel owl-theme">
+              <!--  -->
+              <div class="item owl-carousel__card">
+                <img
+                  class="owl-carousel__background-img"
+                  src="./img/card-rooms-econom.jpg"
+                  alt="room econom"
+                />
+                <p class="owl-carousel__price">From $99</p>
+                <div class="owl-carousel__overlay">
+                  <div>
+                    <h3 class="title owl-carousel__title">Classic Room</h3>
+                    <p class="describe owl-carousel__describe">
+                      Distant orb has power to raise and purify our thoughts
+                      like a strain.
+                    </p>
+                  </div>
+                  <button class="owl-carousel__button">Book now</button>
+                </div>
+              </div>
+              <!--  -->
+              <div class="item owl-carousel__card owl-carousel__card--brand">
+                <img
+                  class="owl-carousel__background-img"
+                  src="./img/card-rooms-standart.jpg"
+                  alt="room standart"
+                />
+                <p class="owl-carousel__price">From $199</p>
+                <div class="owl-carousel__overlay">
+                  <div>
+                    <h3 class="title owl-carousel__title owl-carousel__title--card-brand">Double Room</h3>
+                    <p class="describe owl-carousel__describe owl-carousel__describe--card-brand">
+                      Power to raise and purify our thoughts like a strain of
+                      sacred music.
+                    </p>
+                  </div>
+                  <button class="owl-carousel__button owl-carousel__button--card-brand">Book now</button>
+                </div>
+              </div>
+              <!--  -->
+              <div class="item owl-carousel__card">
+                <img
+                  class="owl-carousel__background-img"
+                  src="./img/card-rooms-premium.jpg"
+                  alt="room premium"
+                />
+                <p class="owl-carousel__price">From $299</p>
+                <div class="owl-carousel__overlay">
+                  <div>
+                    <h3 class="title owl-carousel__title">Super Room</h3>
+                    <p class="describe owl-carousel__describe">
+                      Raise and purify our thoughts like a strain of sacred
+                      music, or a noble.
+                    </p>
+                  </div>
+                  <button class="owl-carousel__button">Book now</button>
+                </div>
+              </div>
+              
+            </div>
+            <!--  -->
+            <div class="custom-nav owl-carousel__custom-nav">
+                <button class="custom-prev owl-carousel__custom-prev">
+                  <svg width="8" height="12">
+                    <use href="./img/icone.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <button class="custom-next owl-carousel__custom-next">
+                  <svg width="8" height="12">
+                    <use href="./img/icone.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+          </div>
+        </div>
+      </section>
 
       <!-- testimonials -->
       <!-- <section class="client-reviews">
@@ -361,6 +461,32 @@
     <!-- footer -->
     <!-- <footer></footer> -->
 
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
+    <!-- <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script> -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
