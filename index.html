@@ -6,6 +6,14 @@
     <title>HOTEL</title>
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
       href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"
     />
     <link
@@ -13,10 +21,6 @@
       href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    />
   </head>
   <body>
     <!-- Header-->
@@ -68,35 +72,96 @@
                 </svg>
               </a>
             </div>
-            <div class="check-availability">
-              <div class="check-availability__arrival">
-                <img
-                  class="hero-section__background-element"
-                  src="./img/background-element-square.png"
-                  alt="background-element"
-                />
-                <p class="check-availability__data">ARRIVAL</p>
-              </div>
-              <div>
-                <p class="check-availability__data">DEPARTURE</p>
-              </div>
-              <div>
-                <p class="check-availability__number">ADULTS</p>
-              </div>
-              <div>
-                <p class="check-availability__number">CHILDREN</p>
-              </div>
-
-              <div class="check-availability__container-button">
-                <button class="button check-availability__button" type="button">
-                  Check Availability
-                </button>
-              </div>
-
-              <div class="check-availability__shadow"></div>
-            </div>
           </div>
         </div>
+        <form class="form-reservation" action="">
+          <!--  -->
+          <div class="form-reservation__data">
+            <label for="datepicker">ARRIVAL</label>
+            <input
+              class="form-reservation__data-input"
+              value="${today}"
+              type="text"
+              name="arrival"
+              id="datepicker"
+            />
+            <svg
+              class="form-reservation__data-svg-arrival"
+              width="8"
+              height="12"
+            >
+              <use href="./img/icone.svg#icon-arrow"></use>
+            </svg>
+          </div>
+          <!--  -->
+          <div class="form-reservation__data">
+            <label for="datepicker2">DEPARTURE</label>
+            <input
+              class="form-reservation__data-input"
+              value="${today}"
+              type="text"
+              name="departure"
+              id="datepicker2"
+            />
+            <svg
+              class="form-reservation__data-svg-departure"
+              width="8"
+              height="12"
+            >
+              <use href="./img/icone.svg#icon-arrow"></use>
+            </svg>
+          </div>
+          <!--  -->
+          <div class="form-reservation__counter form-reservation__border">
+            <label class="" for="#">ADULTS</label>
+            <div class="counter">
+              <button
+                type="button"
+                class="form-reservation__counter-btn"
+                data-attr="decrease"
+              >
+                -
+              </button>
+              <span class="form-reservation__number">2</span>
+              <button
+                type="button"
+                class="form-reservation__counter-btn"
+                data-attr="increase"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="form-reservation__counter">
+            <label class="" for="#">CHILDREN</label>
+            <div class="counter">
+              <button
+                type="button"
+                class="form-reservation__counter-btn"
+                data-attr="decrease"
+              >
+                -
+              </button>
+              <span class="form-reservation__number">0</span>
+              <button
+                type="button"
+                class="form-reservation__counter-btn"
+                data-attr="increase"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="form-reservation__button-container">
+            <button class="button form-reservation__button" type="submit">
+              Check Availability
+            </button>
+          </div>
+          <!--  -->
+        </form>
       </section>
 
       <!-- about company -->
@@ -169,7 +234,7 @@
               <div class="card">
                 <img
                   class="card__background-img"
-                  src="./img/card-wellness-spa-375-from1024px.jpg"
+                  src="./img/card-wellness-spa.jpg"
                   alt="hotel backyard and pool"
                 />
                 <div class="card__overlay">
@@ -216,7 +281,6 @@
           <div class="container">
             <div class="restaurants-hotel__flex-container">
               <!-- left -->
-
               <div>
                 <img
                   class="restaurants-hotel__background-cafe"
@@ -232,13 +296,11 @@
                 </p>
                 <p class="button restaurants-hotel__button">Reserve a table</p>
               </div>
-
               <!-- right -->
-
               <div class="card">
                 <img
                   class="card__background-img"
-                  src="./img/card-chef-375-768px.jpg"
+                  src="./img/card-chef.jpg"
                   alt="chef cook hotel"
                 />
                 <div class="card__overlay">
@@ -370,122 +432,371 @@
               </p>
             </div>
 
-            <div class="owl-carousel owl-theme">
-              <!--  -->
-              <div class="item owl-carousel__card">
+            <div class="owl-carousel owl-theme" id="carousel-rooms">
+              <div class="item owl-carousel__card owl-carousel-rooms">
                 <img
-                  class="owl-carousel__background-img"
+                  class="owl-carousel-rooms__background-img"
                   src="./img/card-rooms-econom.jpg"
                   alt="room econom"
                 />
-                <p class="owl-carousel__price">From $99</p>
-                <div class="owl-carousel__overlay">
+                <p class="owl-carousel-rooms__price">From $99</p>
+                <div class="owl-carousel-rooms__overlay">
                   <div>
-                    <h3 class="title owl-carousel__title">Classic Room</h3>
-                    <p class="describe owl-carousel__describe">
+                    <h3 class="title owl-carousel-rooms__title">
+                      Classic Room
+                    </h3>
+                    <p class="describe owl-carousel-rooms__describe">
                       Distant orb has power to raise and purify our thoughts
                       like a strain.
                     </p>
                   </div>
-                  <button class="owl-carousel__button">Book now</button>
+                  <button class="owl-carousel-rooms__button">Book now</button>
                 </div>
               </div>
-              <!--  -->
-              <div class="item owl-carousel__card owl-carousel__card--brand">
+              <div
+                class="item owl-carousel__card owl-carousel-rooms owl-carousel-rooms--brand"
+              >
                 <img
-                  class="owl-carousel__background-img"
+                  class="owl-carousel-rooms__background-img"
                   src="./img/card-rooms-standart.jpg"
                   alt="room standart"
                 />
-                <p class="owl-carousel__price">From $199</p>
-                <div class="owl-carousel__overlay">
+                <p class="owl-carousel-rooms__price">From $199</p>
+                <div class="owl-carousel-rooms__overlay">
                   <div>
-                    <h3 class="title owl-carousel__title owl-carousel__title--card-brand">Double Room</h3>
-                    <p class="describe owl-carousel__describe owl-carousel__describe--card-brand">
+                    <h3
+                      class="title owl-carousel-rooms__title owl-carousel-rooms__title--brand"
+                    >
+                      Double Room
+                    </h3>
+                    <p
+                      class="describe owl-carousel-rooms__describe owl-carousel-rooms__describe--brand"
+                    >
                       Power to raise and purify our thoughts like a strain of
                       sacred music.
                     </p>
                   </div>
-                  <button class="owl-carousel__button owl-carousel__button--card-brand">Book now</button>
+                  <button
+                    class="owl-carousel-rooms__button owl-carousel-rooms__button--brand"
+                  >
+                    Book now
+                  </button>
                 </div>
               </div>
-              <!--  -->
-              <div class="item owl-carousel__card">
+              <div class="item owl-carousel__card owl-carousel-rooms">
                 <img
-                  class="owl-carousel__background-img"
+                  class="owl-carousel-rooms__background-img"
                   src="./img/card-rooms-premium.jpg"
                   alt="room premium"
                 />
-                <p class="owl-carousel__price">From $299</p>
-                <div class="owl-carousel__overlay">
+                <p class="owl-carousel-rooms__price">From $299</p>
+                <div class="owl-carousel-rooms__overlay">
                   <div>
-                    <h3 class="title owl-carousel__title">Super Room</h3>
-                    <p class="describe owl-carousel__describe">
+                    <h3 class="title owl-carousel-rooms__title">Super Room</h3>
+                    <p class="describe owl-carousel-rooms__describe">
                       Raise and purify our thoughts like a strain of sacred
                       music, or a noble.
                     </p>
                   </div>
-                  <button class="owl-carousel__button">Book now</button>
+                  <button class="owl-carousel-rooms__button">Book now</button>
                 </div>
               </div>
-              
             </div>
-            <!--  -->
             <div class="custom-nav owl-carousel__custom-nav">
-                <button class="custom-prev owl-carousel__custom-prev">
-                  <svg width="8" height="12">
-                    <use href="./img/icone.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-                <button class="custom-next owl-carousel__custom-next">
-                  <svg width="8" height="12">
-                    <use href="./img/icone.svg#icon-arrow"></use>
-                  </svg>
-                </button>
-              </div>
+              <button class="custom-prev-rooms owl-carousel__custom-prev">
+                <svg width="8" height="12">
+                  <use href="./img/icone.svg#icon-arrow"></use>
+                </svg>
+              </button>
+              <button class="custom-next-rooms owl-carousel__custom-next">
+                <svg width="8" height="12">
+                  <use href="./img/icone.svg#icon-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--filling-hotel -->
+      <section class="filling-hotel">
+        <div class="container">
+          <div class="filling-hotel__container">
+            <div class="filling-hotel__item">
+              <svg width="170" height="170">
+                <use href="./img/icone.svg#icon-percent-73"></use>
+              </svg>
+              <p class="filling-hotel__number">73</p>
+              <p class="filling-hotel__text">Super Suites</p>
+            </div>
+            <div class="filling-hotel__item">
+              <svg width="170" height="170">
+                <use href="./img/icone.svg#icon-percent-42"></use>
+              </svg>
+              <p class="filling-hotel__number">42</p>
+
+              <p class="filling-hotel__text">Years of Expirience</p>
+            </div>
+            <div class="filling-hotel__item">
+              <svg width="170" height="170">
+                <use href="./img/icone.svg#icon-percent-50"></use>
+              </svg>
+              <p class="filling-hotel__number">50</p>
+              <p class="filling-hotel__text">Family Rooms</p>
+            </div>
+
+            <div class="filling-hotel__item">
+              <svg width="170" height="170">
+                <use href="./img/icone.svg#icon-percent-99"></use>
+              </svg>
+              <p class="filling-hotel__number">99</p>
+              <p class="filling-hotel__text">Hotel Personal</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- testimonials -->
-      <!-- <section class="client-reviews">
-        <div class="container"></div>
-      </section> -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="title testimonials__title">Testimonials</h2>
+          <div
+            class="owl-carousel owl-theme owl-carousel-testimonials"
+            id="carousel-testimonials"
+          >
+            <div class="item owl-carousel-testimonials__card">
+              <div class="owl-carousel-testimonials__container-title">
+                <p class="subtitle owl-carousel-testimonials__subtitle">
+                  Very Good Hotel
+                </p>
+                <div class="owl-carousel-testimonials__quotes">
+                  <img src="./img/card-quotes.png" alt="quotes" />
+                </div>
+              </div>
+              <p class="describe owl-carousel-testimonials__text">
+                "Peep at some distant orb has power to raise and purify our
+                thoughts like a strain of sacred music, or a noble picture, or a
+                passage from the grander poets. It always does one
+                good.Apparently we had reached a great height in the atmosphere,
+                for the sky was a dead black."
+              </p>
 
-      <!-- testimonials -->
+              <div class="owl-carousel-testimonials__container-author">
+                <div class="owl-carousel-testimonials__author-foto">
+                  <img
+                    src="./img/card-cameron-rogers.png"
+                    alt="foto Cameron Rogers"
+                  />
+                </div>
+
+                <div>
+                  <p class="subtitle owl-carousel-testimonials__author-name">
+                    Cameron Rogers
+                  </p>
+                  <div class="owl-carousel-testimonials__author-stars">
+                    <img src="./img/card-stars.png" alt="stars" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item owl-carousel-testimonials__card">
+              <div class="owl-carousel-testimonials__container-title">
+                <p class="subtitle owl-carousel-testimonials__subtitle">
+                  My Best Vacation
+                </p>
+                <div class="owl-carousel-testimonials__quotes">
+                  <img src="./img/card-quotes.png" alt="quotes" />
+                </div>
+              </div>
+              <p class="describe owl-carousel-testimonials__text">
+                "Distant orb has power to raise and purify our thoughts like a
+                strain of sacred music, or a noble picture, or a passage from
+                the grander poets. By the same illusion which lifts the horizon
+                of the sea to the level of the spectator on a hillside, the
+                sable cloud beneath was dished out, and the car seemed."
+              </p>
+
+              <div class="owl-carousel-testimonials__container-author">
+                <div class="owl-carousel-testimonials__author-foto">
+                  <img
+                    src="./img/card-aasiya-jayavant.png"
+                    alt="foto Aasiya Jayavant"
+                  />
+                </div>
+
+                <div>
+                  <p class="subtitle owl-carousel-testimonials__author-name">
+                    Aasiya Jayavant
+                  </p>
+
+                  <div class="owl-carousel-testimonials__author-stars">
+                    <img src="./img/card-stars.png" alt="stars" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-nav owl-carousel__custom-nav">
+            <button class="custom-prev-testimonials owl-carousel__custom-prev">
+              <svg width="8" height="12">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <button class="custom-next-testimonials owl-carousel__custom-next">
+              <svg width="8" height="12">
+                <use href="./img/icone.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- hotel-blog -->
       <!-- <section class="hotel-blog">
         <div class="container"></div>
       </section> -->
     </main>
 
     <!-- footer -->
-    <!-- <footer></footer> -->
+    <footer>
+      <div class="footer__container">
+        <div class="container">
+          <div class="footer__grid-container">
+            <img
+              class="footer__grid-img"
+              src="./img/footer-landscape.jpg"
+              alt="landscape"
+            />
+            <img
+              class="footer__grid-img"
+              src="./img/footer-hotel.jpg"
+              alt="hotel"
+            />
+            <img
+              class="footer__grid-img"
+              src="./img/footer-lawns.jpg"
+              alt="lawns"
+            />
+            <img
+              class="footer__grid-img"
+              src="./img/footer-territory-hotel.jpg"
+              alt="territory hotel"
+            />
+            <img
+              class="footer__grid-img"
+              src="./img/footer-palm.jpg"
+              alt="palm"
+            />
+            <img
+              class="footer__grid-img"
+              src="./img/footer-sea.jpg"
+              alt="sea"
+            />
+          </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
+          <div class="footer__flex-container">
+            <div>
+              <a class="logo footer__logo" href="#">HOTEL</a>
+              <ul class="footer__contact-container">
+                <li>
+                  <a class="footer__contact-item" href="tel:+4321098765430">
+                    <svg class="networks__icone" width="16" height="18">
+                      <use href="./img/icone.svg#icon-tell"></use>
+                    </svg>
+                    <p>(4321) 0987-654-320</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="footer__contact-item"
+                    href="mailto:support@hotel.com"
+                  >
+                    <svg class="networks__icone" width="18" height="14">
+                      <use href="./img/icone.svg#icon-email"></use>
+                    </svg>
+                    <p>support@hotel.com</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="footer__contact-item"
+                    href="https://maps.app.goo.gl/tH8wsuJqJwnmCk9t7"
+                  >
+                    <svg class="networks__icone" width="15" height="18">
+                      <use href="./img/icone.svg#icon-maps"></use>
+                    </svg>
+                    <p>33 Jaja Park Rd, Yellow, USA</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer__menu-title">Menu</p>
+              <ul class="footer__menu">
+                <li class="footer__menu-link">About</li>
+                <li class="footer__menu-link">Service</li>
+                <li class="footer__menu-link">Rooms</li>
+                <li class="footer__menu-link">Blog</li>
+                <li class="footer__menu-link">Testimonials</li>
+                <li class="footer__menu-link">Contact</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="footer__subscribe-container">
+                <p class="footer__subscribe-title">Subscribe</p>
+                <p class="footer__subscribe-text">No spam. Only profit.</p>
+              </div>
+
+              <form class="footer__form" action="">
+                <input
+                  class="footer__form-input"
+                  type="email"
+                  placeholder="Email"
+                />
+                <button class="footer__form-button" type="submit">
+                  <svg class="footer__form-button-svg" width="24" height="24">
+                    <use href="./img/icone.svg#icon-send-message"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom-container">
+        <div class="container">
+          <div class="footer__bottom-flex-container">
+            <div class="networks">
+              <a href="" target="_blank" class="networks__container">
+                <svg class="networks__icone" width="12" height="18">
+                  <use href="./img/icone.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="" target="_blank" class="networks__container">
+                <svg class="networks__icone" width="16" height="13">
+                  <use href="./img/icone.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a href="" target="_blank" class="networks__container">
+                <svg class="networks__icone" width="16" height="16">
+                  <use href="./img/icone.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+            <address class="footer__address">
+              Copyright © 2019 Hotel. All Rights Reserved.
+            </address>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-    <!-- <script>
-      $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        loop: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          600: {
-            items: 3,
-          },
-          1000: {
-            items: 5,
-          },
-        },
-      });
-    </script> -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

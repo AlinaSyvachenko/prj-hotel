@@ -3,7 +3,6 @@
     background-color: var(--color-brand-blue-light);
     width: 100%;
     position: relative;
-    z-index: -3;
     padding-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
@@ -26,7 +25,8 @@
     border: 1px solid #d8d8d8;
     border-radius: 15px;
     position: absolute;
-    top: 288px;
+    top: -210px;
+    z-index: 10;
 
     @media screen and (min-width: 768px) {
       top: 100px;
@@ -34,7 +34,6 @@
   }
 
   &__title {
-    padding-top: 443px;
     max-width: 328px;
 
     @media screen and (min-width: 768px) {

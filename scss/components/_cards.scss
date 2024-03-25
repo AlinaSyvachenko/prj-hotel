@@ -1,6 +1,7 @@
 .card {
   margin-top: 80px;
   position: relative;
+  z-index: 10;
 
   &__background-img {
     border-radius: 32px;

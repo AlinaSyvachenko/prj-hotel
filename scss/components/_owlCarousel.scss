@@ -9,10 +9,6 @@
     padding: 24px;
     background-color: var(--color-white);
 
-    &--brand {
-        background-color: var(--color-brand-blue);
-    }
-
     @media screen and (min-width: 768px) {
       width: 692px;
       height: 542px;
@@ -26,54 +22,6 @@
       height: 576px;
     }
   }
-
-  &__background-img {
-    border-radius: 32px;
-    height: 272px;
-  }
-
-  &__price {
-    position: absolute;
-    top: 48px;
-    left: 48px;
-    background-color: var(--color-white);
-    padding: 16px 24px;
-    border-radius: 15px;
-  }
-
-
-  &__title {
-    margin-top: 36px;
-    margin-bottom: 0;
-    font-size: 36px;
-    &--card-brand {
-        color: var(--color-white)
-    }
-  }
-
-  &__describe {
-    margin-top: 15px;
-    &--card-brand {
-        color: var(--color-white-transparent)
-    }
-  }
-
-  
-  &__button {
-    @include button(
-      162px,
-      var(--color-white),
-      var(--color-brand-blue),
-      1px solid var(--color-brand-blue)
-    );
-    padding-top: 8px;
-    margin-top: 20px;
-    &--card-brand {
-        background-color: var(--color-brand-green);
-        color: var(--color-grey);
-    }
-  }
-
   &__custom-nav {
     display: flex;
     justify-content: space-between;
@@ -120,6 +68,7 @@ rotate: 270deg;
 cursor: pointer;
 position: relative;
 left: 10px;
+overflow: hidden;
 
      @media screen and (min-width: 1024px) {
 left: -46px;
